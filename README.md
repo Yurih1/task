@@ -34,11 +34,12 @@ cp env.example .env
 Edite o arquivo .env com um editor de texto e adicione as seguintes variáveis:
 
 ```bash
-DJANGO_DB_HOST=db
-DJANGO_DB_PORT=3306
-DJANGO_DB_NAME=dbname
-DJANGO_DB_USER=user
-DJANGO_DB_PASSWORD=password
+SECRET_KEY=1234
+DB_HOST=db
+DB_PORT=3306
+DB_NAME=dbname
+DB_USER=user
+DB_PASSWORD=password
 ```
 ### 3. Rodando o projeto
 
