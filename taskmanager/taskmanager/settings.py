@@ -144,11 +144,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Configuração do JWT
+# JWT Configuration
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),  # Tempo de validade do token de acesso
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),   # Tempo de validade do token de atualização
-    'ROTATE_REFRESH_TOKENS': False,  # Definir como True se você quiser rotacionar os tokens de atualização
-    'BLACKLIST_AFTER_ROTATION': True,  # Definir como True se você quiser adicionar tokens rotacionados à blacklist
-    'ALGORITHM': 'HS256',  # Algoritmo de codificação
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),  # Access token expiration time
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),   # Refresh token expiration time
+    'ROTATE_REFRESH_TOKENS': False,  # Set to True if you want to rotate refresh tokens
+    'BLACKLIST_AFTER_ROTATION': True,  # Set to True if you want to add rotated tokens to the blacklist
+    'ALGORITHM': 'HS256',  # Coding algorithm
 }

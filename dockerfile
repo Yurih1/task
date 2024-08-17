@@ -1,22 +1,22 @@
 FROM python:3.9
 
-# Atualize e instale o cliente do MariaDB
+# Update and install the MariaDB client
 RUN apt-get update && \
     apt-get install -y mariadb-client
 
 # Defina o diretório de trabalho
 WORKDIR /app/taskmanager/
 
-# Copie os arquivos de requisitos e instale dependências
+# Copy requirements files and install dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# Copie o restante dos arquivos da aplicação
+# Copy the rest of the application files
 COPY . /app/
 
-# Copie o script de espera para o container
+# Copy the wait script to the container
 COPY wait-for-it.sh /app/wait-for-it.sh
 RUN chmod +x /app/wait-for-it.sh
 
-# Comando para iniciar o servidor
+# Command to start the server
 CMD ["/app/wait-for-it.sh", "db", "--", "gunicorn", "taskmanager.wsgi:application", "--bind", "0.0.0.0:8000"]
