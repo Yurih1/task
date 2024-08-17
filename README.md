@@ -33,12 +33,13 @@ cp env.example .env
 ```
 Edite o arquivo .env com um editor de texto e adicione as seguintes variáveis:
 
+```bash
 DJANGO_DB_HOST=db
 DJANGO_DB_PORT=3306
 DJANGO_DB_NAME=dbname
 DJANGO_DB_USER=user
 DJANGO_DB_PASSWORD=password
-
+```
 ### 3. Rodando o projeto
 
 ```bash
