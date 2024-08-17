@@ -4,7 +4,7 @@ FROM python:3.9
 RUN apt-get update && \
     apt-get install -y mariadb-client
 
-# Defina o diretório de trabalho
+# Set the working directory
 WORKDIR /app/taskmanager/
 
 # Copy requirements files and install dependencies
