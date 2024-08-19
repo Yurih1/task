@@ -83,7 +83,7 @@ cd taskmanager
 
 pip install -r requirements.txt
 
-python manage.py migrate # Será preciso criar um bd, abrar um novo terminal, mysql -u <usuario> -p CREATE DATABASE <nome que está na .env>;
+python manage.py migrate # Será preciso criar um bd, abra um novo terminal, mysql -u <usuario> -p CREATE DATABASE <nome que está na .env>;
 
 
 python manage.py createsuperuser
